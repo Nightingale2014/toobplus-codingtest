@@ -31,6 +31,7 @@
 
 ## 📂 프로젝트 구조
 
+```text
 20251223_gyp_codingtest/
 ├─ .idea/
 ├─ build/
@@ -49,6 +50,7 @@
 ├─ img.png
 ├─ package.json
 └─ package-lock.json
+
 
 ---
 
