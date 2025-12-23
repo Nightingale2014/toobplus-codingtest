@@ -30,7 +30,6 @@ HTML5
 CSS3
 
 🗂 프로젝트 구조
-```text
 20251223_gyp_codingtest/
 ├─ .idea/                     # IntelliJ 설정 파일
 ├─ build/                     # React build 결과물
