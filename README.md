@@ -1,15 +1,14 @@
---
 📘 Coding Test – Frontend (React)
-
+--
 프론트엔드 코딩 테스트 과제로 진행한 React 기반 프로젝트입니다.
 제공된 코딩 테스트 매뉴얼을 기준으로, 요구사항을 충족하는 방향으로 구조와 기능을 구현했습니다.
 
 모바일 퍼스트 원칙을 기반으로 반응형 헤더와 메인 콘텐츠를 구성했으며,
 디렉토리 구조 정리와 파일 분리를 통해 가독성과 유지보수를 고려했습니다.
 
---
-📂 프로젝트 개요
 
+📂 프로젝트 개요
+--
 프론트엔드 코딩 테스트 제출용 프로젝트
 
 React 기반 SPA 구조
@@ -19,9 +18,9 @@ Mobile / Tablet / PC 반응형 대응
 헤더 및 메인 콘텐츠 요구사항 구현
 
 디렉토리 구조화 및 리소스 관리에 중점
---
-🛠 사용 기술
 
+🛠 사용 기술
+--
 React
 
 JavaScript (ES6)
@@ -31,6 +30,7 @@ HTML5
 CSS3
 
 🗂 프로젝트 구조
+```text
 20251223_gyp_codingtest/
 ├─ .idea/                     # IntelliJ 설정 파일
 ├─ build/                     # React build 결과물
@@ -40,12 +40,12 @@ CSS3
 │  │  ├─ photo_01.jpg ~ 03.jpg
 │  ├─ static/                 # 정적 파일 (CSS, JS)
 │  │  └─ asset-manifest.json
-│  └─ index.html              # 빌드된 메인 HTML
+│  └─ index.html
 │
-├─ node_modules/              # 의존성 모듈
-├─ out/                       # IDE 빌드 아웃풋
-├─ public/                    # public 정적 리소스
-├─ src/                       # React 소스 코드
+├─ node_modules/
+├─ out/
+├─ public/
+├─ src/
 │
 ├─ .gitignore
 ├─ img.png
@@ -53,7 +53,7 @@ CSS3
 └─ package-lock.json
 
 📁 디렉토리 구성 의도
-
+--
 build/
 제출 기준에 맞춰 React build 결과물을 포함했습니다.
 index.html 기준으로 결과물을 확인할 수 있습니다.
@@ -66,6 +66,7 @@ React 기반 UI 구현을 위한 소스 디렉토리입니다.
 컴포넌트 단위로 분리해 구조를 명확히 했습니다.
 
 🧭 구현 범위 정리
+--
 헤더 제작 (반응형)
 
 2 depth 구조의 반응형 헤더 구현
@@ -87,7 +88,7 @@ section1 / test1 / section3 페이지
 해상도 구간별 반응형 동작 분기 처리
 
 ✍️ 작업 시 고려사항
-
+--
 신입 프론트엔드 코딩 테스트 기준을 고려해
 모든 요구사항을 완벽히 구현하기보다는,
 구조 이해와 구현 방향성 전달에 집중했습니다.
@@ -96,17 +97,17 @@ section1 / test1 / section3 페이지
 코드 의도가 드러나도록 작성했습니다.
 
 📦 결과물 확인
-
+--
 React build 결과물은 build 폴더에 포함되어 있습니다.
 
 index.html 파일 기준으로 결과물을 확인할 수 있습니다.
 
 👤 작성자
-
+--
 박기영
 
 ▶️ 실행 방법
-
+--
 본 프로젝트는 React 기반으로 작성되어,
 로컬 환경에서 실행 시 npm start 명령어를 통해 확인할 수 있습니다.
 
@@ -119,7 +120,7 @@ npm start
 개발 서버 실행 후 브라우저에서 로컬 주소를 통해 결과물을 확인할 수 있습니다.
 
 📦 결과물 확인
-
+--
 React build 결과물은 build 폴더에 포함되어 있습니다.
 
 제출용 결과물은 build 폴더 기준으로 확인할 수 있습니다.
