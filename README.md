@@ -1,186 +1,151 @@
-🧩 TOOBPLUS Coding Test
+# 20251223_gyp_codingtest
 
-지원자명: 박기영
-작성일자: 2025-12-23
-제출 파일명: 20251223_pky_codingtest.zip
+투비플러스 코딩 테스트 과제 결과물입니다.  
+React 기반(SPA)으로 구현했습니다. (mobile-first)
 
-🧭 프로젝트 개요
+---
 
-React 기반 SPA(Single Page Application) 형태로 제작된 투브플러스 프론트엔드 코딩테스트 과제입니다.
-요구사항에 맞춰 반응형 헤더, Swiper 슬라이드, hover/click 이펙트, 페이지별 반응형 레이아웃을 구현했습니다.
-모든 스타일은 모바일 퍼스트 원칙으로 작성되었습니다.
+## 1) 제출 파일 구조
 
-🗂️ 디렉토리 구조
 20251223_gyp_codingtest/
-├── .idea/                      # IntelliJ 설정 파일
-├── build/                      # React 빌드 결과물
-│   ├── images/                 # 이미지 리소스 (logo, photo, icon)
-│   │   ├── icon_01.png ~ icon_05.png
-│   │   ├── logo.png
-│   │   ├── photo_01.jpg ~ photo_03.jpg
-│   ├── static/                 # 정적 파일 (CSS, JS, manifest 등)
-│   │   └── asset-manifest.json
-│   └── index.html              # 빌드된 메인 HTML
-├── node_modules/               # NPM 의존성 모듈
-├── out/                        # IntelliJ 빌드 아웃풋
-├── public/                     # 정적 자원 (favicon, public index.html 등)
-├── src/                        # React 소스코드
-│   ├── components/             # Header, Section1, Section3 등 UI 컴포넌트
-│   ├── pages/                  # 각 페이지 라우팅 구성
-│   ├── styles/                 # CSS 및 전역 스타일
-│   ├── App.jsx                 # App 진입점
-│   └── index.js                # React DOM 렌더링 진입점
-├── .gitignore                  # Git 제외 파일 목록
-├── package.json                # 프로젝트 메타데이터 및 의존성
-├── package-lock.json           # 의존성 버전 잠금 파일
-└── README.md                   # 프로젝트 설명 문서
+├── build/ # React 빌드 결과물 (제출 필수)
+│ ├── index.html
+│ ├── static/
+│ └── asset-manifest.json
+├── public/
+├── src/
+│ ├── components/
+│ ├── pages/
+│ └── ...
+└── README.md
 
-⚙️ 개발 환경
+yaml
+코드 복사
 
-Framework: React 18+
+- 이미지 리소스: `build/images/` (logo, photo, icon 사용)
+- 실행 확인은 `build` 폴더 기준으로 가능합니다.
 
-Language: JavaScript (ES6)
+---
 
-Styling: CSS3 (모바일 퍼스트 구조)
+## 2) 실행 방법
 
-Library: Swiper.js
-
-Breakpoints:
-
-Mobile: <768px
-
-Tablet: 768px ~ 1279px
-
-PC: ≥1280px
-
-🧩 구현 내역
-🧱 Header (헤더)
-
-White 기반 투명도 50% 배경
-
-로고 클릭 시 홈(/) 이동
-
-2 depth 메뉴 구조
-
-모바일 / 태블릿 (≤768px)
-
-헤더 높이 60px
-
-메뉴명 숨김, Toggle 버튼 활성화
-
-Toggle 클릭 시 GNB Modal 오픈 (배경 블랙 30% 투명도)
-
-1 depth 클릭 → 하위 첫 메뉴 이동, 메뉴 유지
-
-2 depth 클릭 → 페이지 이동 후 GNB 닫힘
-
-GNB 외부 클릭 시 닫힘
-
-PC (≥1280px)
-
-헤더 높이 80px
-
-hover 시 2 depth 슬라이드 표시
-
-1 depth / 2 depth 각각 다른 hover 이펙트 적용
-
-🏠 Home (index.html 대응)
-
-뷰포트 높이 100% 섹션
-
-텍스트: "코딩테스트 박기영"
-
-중앙 정렬
-
-폰트 크기: 5rem
-
-hover 시 색상 #555, 커서 pointer
-
-🖼️ Section1 (menu1 > 섹션1)
-
-Swiper.js 기반 3장 이미지 슬라이드 (photo_01~03.jpg)
-
-옵션: autoplay, pagination, navigation, progressbar, loop
-
-🧭 Test1 (menu2 > test1)
-
-Swiper.js 기반 5장 아이콘 슬라이드 (icon_01~05.png)
-
-반응형 옵션:
-
-<768px → 1장 + autoplay
-
-768~1279px → 2장 (수동)
-
-≥1280px → 3장 + autoplay
-
-⚙️ Section3 (menu3 > 섹션3)
-
-중앙 정렬된 200×200 크기 div 3개
-
-반응형 배치:
-
-<768px: 세로 정렬
-
-768~1279px: 가로 정렬 + 20px 간격
-
-≥1280px: 가로 정렬 + 40px 간격 + border(2px solid #000)
-
-hover / click 이벤트:
-
-1번 div: Hello World 오버레이 fade-in/out
-
-2번 div: border 색상 전환 (transition 없음)
-
-3번 div: 클릭 횟수 표시 (::before / ::after 활용)
-
-🎨 Free Content (선택 항목)
-
-가산점용 자유 콘텐츠
-
-인터랙션 / 애니메이션 등 추가 가능
-
-🧪 실행 방법
-# 의존성 설치
+### (1) 로컬 개발 실행
+```bash
 npm install
-
-# 개발 서버 실행
-npm start
-
-# 빌드 (제출용)
+npm run dev
+(2) 빌드 파일 생성
+bash
+코드 복사
 npm run build
+3) 구현 범위 요약
+✅ Header (반응형 2-depth)
+배경: white 기반 투명도 50% 적용
+
+로고: logo.png 사용 / 클릭 시 Home 이동
+
+메뉴 구조
+
+menu1 → section1, section2
+
+menu2 → test1, test2, test3, test4
+
+menu3 → section3, test5
+
+✅ 반응형 (Mobile / Tablet: < 1280px)
+기준: 768px
+
+헤더 높이 60px / Toggle 버튼으로 gnb 열기
+
+gnb 오픈 시 외부 영역 dim 처리 (black 30%)
+
+1 depth 클릭 시 2 depth 첫 페이지로 이동, gnb 유지
+
+1 depth 클릭 시 해당 메뉴의 2 depth만 슬라이드로 표시
+
+2 depth 클릭 시 페이지 이동 + gnb 닫힘
+
+gnb 외부 클릭 시 닫힘
+
+✅ 반응형 (PC: ≥ 1280px)
+헤더 높이 80px / Toggle 제거, 메뉴 노출
+
+hover 시 2 depth 슬라이드
+
+1 depth / 2 depth 각각 hover effect 다르게 적용
+
+4) 페이지별 구현 내용
+/ (index)
+디바이스 높이 100% 섹션 1개
+
+중앙 텍스트: 코딩테스트 지원자명
+
+hover: 폰트 색상 #555, 커서 pointer
+
+/section1
+높이 100% 섹션 3개
+
+Swiper 슬라이드 3장 (photo_01~03)
+
+옵션: 자동 슬라이드 / pagination / navigation / progressbar / loop
+
+/test1
+Swiper 슬라이드 5장 (icon_01~05)
+
+반응형 설정
+
+< 768px: 1장 + autoplay
+
+768~1279px: 2장 + autoplay off
+
+≥ 1280px: 3장 + autoplay on
+
+/section3
+중앙에 200x200 div 3개 (1,2,3)
+
+레이아웃
+
+< 768px: 세로 배치
+
+768~1279px: 가로 배치 + gap 20px
+
+≥ 1280px: 가로 배치 + gap 40px + border 2px(#000) + size 고정
+
+hover/click (≥1280px에서만 적용)
+
+1번: overlay 텍스트박스 “Hello World” 아래에서 올라오며 fade-in/out (transition 600ms)
+
+2번: border 20px 안쪽 생성/색 변경, 배경색 변경 (transition 없음)
+
+3번: 내부에 200x100 div 2개
+
+3-1: 페이지 접근 후 클릭 횟수 (::before)
+
+3-2: 3번 div 클릭 횟수 (::after)
+
+5) 사용 기술
+React
+
+CSS / (사용한 경우) [TailwindCSS]
+
+Swiper.js
+
+6) 참고
+mobile-first 기준으로 작업했습니다.
+
+구현한 기능 설명 주석은 관련 코드 상단에 기재했습니다.
+
+yaml
+코드 복사
+
+---
+
+너 지금 여기서 **[지원자명]**, **[Tailwind 썼는지]**, **라우팅 경로가 실제로 `/section1`, `/test1`, `/section3` 맞는지**만 맞춰주면 바로 제출용 README 됨.
+
+원하면 내가 너 프로젝트 구조(폴더 트리) 기준으로 **경로/페이지명 100% 맞춰서** 더 깔끔하게 다듬어줄게.  
+지금 너 라우팅 실제 파일명이 `section1.html` 같은 정적이야? 아니면 React Router로 `Section1.jsx` 페이지야? (둘 중 하나만 말해줘)
 
 
-빌드 결과물은 /build 폴더에 생성됩니다.
 
-제출 시 해당 폴더를 포함해 압축(20251223_pky_codingtest.zip) 후 구글드라이브로 업로드합니다.
 
-📨 제출 정보
 
-제출 메일: kyungsu102@toobplus.com
 
-참조: yjy@toobplus.com
-
-파일명: 20251223_pky_codingtest.zip
-
-기한: 링크 전달 후 24시간 이내
-
-주의: JS 포함 시 메일 발송 오류 → Google Drive 링크로 제출
-
-📈 참고 사항
-
-React Hooks 기반으로 상태 관리
-
-모바일 퍼스트 CSS
-
-주석을 상단에 명시해 기능 설명
-
-구조화된 컴포넌트 설계
-
-GNB 및 Swiper 기능 독립 모듈화
-
-👤 작성자
-
-박기영 (Park Ki Young)
-📧 Email: [본인 이메일 주소]
-📅 Date: 2025-12-23
