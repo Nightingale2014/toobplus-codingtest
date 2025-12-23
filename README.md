@@ -31,25 +31,25 @@ CSS3
 
 🗂 프로젝트 구조
 20251223_gyp_codingtest/
-├─ .idea/                     # IntelliJ 설정 파일
-├─ build/                     # React build 결과물
-│  ├─ images/                 # 이미지 리소스
+20251223_gyp_codingtest/
+├─ .idea/
+├─ build/
+│  ├─ images/
 │  │  ├─ icon_01.png ~ 05.png
 │  │  ├─ logo.png
 │  │  ├─ photo_01.jpg ~ 03.jpg
-│  ├─ static/                 # 정적 파일 (CSS, JS)
+│  ├─ static/
 │  │  └─ asset-manifest.json
 │  └─ index.html
-│
 ├─ node_modules/
 ├─ out/
 ├─ public/
 ├─ src/
-│
 ├─ .gitignore
 ├─ img.png
 ├─ package.json
 └─ package-lock.json
+
 
 
 📁 디렉토리 구성 의도
