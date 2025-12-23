@@ -32,7 +32,10 @@ yaml
 ### (1) 로컬 개발 실행
 ```bash
 npm install
-npm run dev
+npm start
+
+--
+
 (2) 빌드 파일 생성
 bash
 코드 복사
