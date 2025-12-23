@@ -12,6 +12,8 @@
 ---
 
 ## 🗂️ 디렉토리 구조
+## 🗂️ 디렉토리 구조
+```yaml
 20251223_gyp_codingtest/
 ├── .idea/                      # IntelliJ 설정 파일
 ├── build/                      # React 빌드 결과물
@@ -35,6 +37,7 @@
 ├── package.json                # 프로젝트 메타데이터 및 의존성
 ├── package-lock.json           # 의존성 버전 잠금 파일
 └── README.md                   # 프로젝트 설명 문서
+
 
 
 yaml
