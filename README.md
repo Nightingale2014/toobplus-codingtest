@@ -51,6 +51,8 @@ CSS3
 ├─ package.json
 └─ package-lock.json
 
+
+--
 📁 디렉토리 구성 의도
 --
 build/
