@@ -13,23 +13,29 @@
 
 ## 🗂️ 디렉토리 구조
 20251223_gyp_codingtest/
-├── .idea/
-├── build/
-│   ├── images/
+├── .idea/                      # IntelliJ 설정 파일
+├── build/                      # React 빌드 결과물
+│   ├── images/                 # 이미지 리소스 (logo, photo, icon)
 │   │   ├── icon_01.png ~ icon_05.png
 │   │   ├── logo.png
 │   │   ├── photo_01.jpg ~ photo_03.jpg
-│   ├── static/
+│   ├── static/                 # 정적 파일 (CSS, JS, manifest 등)
 │   │   └── asset-manifest.json
-│   └── index.html
-├── node_modules/
-├── out/
-├── public/
-├── src/
-├── .gitignore
-├── package.json
-├── package-lock.json
-└── README.md  
+│   └── index.html              # 빌드된 메인 HTML
+├── node_modules/               # NPM 의존성 모듈
+├── out/                        # IntelliJ 빌드 아웃풋
+├── public/                     # 정적 자원 (favicon, public index.html 등)
+├── src/                        # React 소스코드
+│   ├── components/             # Header, Section1, Section3 등 UI 컴포넌트
+│   ├── pages/                  # 각 페이지 라우팅 구성
+│   ├── styles/                 # CSS 및 전역 스타일
+│   ├── App.jsx                 # App 진입점
+│   └── index.js                # React DOM 렌더링 진입점
+├── .gitignore                  # Git 제외 파일 목록
+├── package.json                # 프로젝트 메타데이터 및 의존성
+├── package-lock.json           # 의존성 버전 잠금 파일
+└── README.md                   # 프로젝트 설명 문서
+
 
 yaml
 코드 복사
