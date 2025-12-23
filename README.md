@@ -1,149 +1,47 @@
-# 20251223_gyp_codingtest
+Coding Test – Frontend (React)
 
-투비플러스 코딩 테스트 과제 결과물입니다.  
-React 기반(SPA)으로 구현했습니다. (mobile-first)
+본 프로젝트는 프론트엔드 코딩 테스트 과제로 진행한 작업물입니다.
+React를 사용해 정적인 페이지를 구성했으며, 모바일 퍼스트 원칙을 기준으로 레이아웃과 반응형을 구현했습니다.
 
----
+과제 요구사항에 맞춰 전체 구조를 단순하게 유지하면서도,
+컴포넌트 분리와 기본적인 인터랙션을 통해 프론트엔드 구현 역량을 보여주는 데 초점을 두었습니다.
 
-## 1) 제출 파일 구조
+사용 기술
 
-20251223_gyp_codingtest/
-├── build/ # React 빌드 결과물 (제출 필수)
-│ ├── index.html
-│ ├── static/
-│ └── asset-manifest.json
-├── public/
-├── src/
-│ ├── components/
-│ ├── pages/
-│ └── ...
-└── README.md
-
-yaml
-코드 복사
-
-- 이미지 리소스: `build/images/` (logo, photo, icon 사용)
-- 실행 확인은 `build` 폴더 기준으로 가능합니다.
-
----
-
-## 2) 실행 방법
-
-### (1) 로컬 개발 실행
-```bash
-npm install
-npm start
-
---
-
-(2) 빌드 파일 생성
-bash
-코드 복사
-npm run build
-3) 구현 범위 요약
-✅ Header (반응형 2-depth)
-배경: white 기반 투명도 50% 적용
-
-로고: logo.png 사용 / 클릭 시 Home 이동
-
-메뉴 구조
-
-menu1 → section1, section2
-
-menu2 → test1, test2, test3, test4
-
-menu3 → section3, test5
-
-✅ 반응형 (Mobile / Tablet: < 1280px)
-기준: 768px
-
-헤더 높이 60px / Toggle 버튼으로 gnb 열기
-
-gnb 오픈 시 외부 영역 dim 처리 (black 30%)
-
-1 depth 클릭 시 2 depth 첫 페이지로 이동, gnb 유지
-
-1 depth 클릭 시 해당 메뉴의 2 depth만 슬라이드로 표시
-
-2 depth 클릭 시 페이지 이동 + gnb 닫힘
-
-gnb 외부 클릭 시 닫힘
-
-✅ 반응형 (PC: ≥ 1280px)
-헤더 높이 80px / Toggle 제거, 메뉴 노출
-
-hover 시 2 depth 슬라이드
-
-1 depth / 2 depth 각각 hover effect 다르게 적용
-
-4) 페이지별 구현 내용
-/ (index)
-디바이스 높이 100% 섹션 1개
-
-중앙 텍스트: 코딩테스트 지원자명
-
-hover: 폰트 색상 #555, 커서 pointer
-
-/section1
-높이 100% 섹션 3개
-
-Swiper 슬라이드 3장 (photo_01~03)
-
-옵션: 자동 슬라이드 / pagination / navigation / progressbar / loop
-
-/test1
-Swiper 슬라이드 5장 (icon_01~05)
-
-반응형 설정
-
-< 768px: 1장 + autoplay
-
-768~1279px: 2장 + autoplay off
-
-≥ 1280px: 3장 + autoplay on
-
-/section3
-중앙에 200x200 div 3개 (1,2,3)
-
-레이아웃
-
-< 768px: 세로 배치
-
-768~1279px: 가로 배치 + gap 20px
-
-≥ 1280px: 가로 배치 + gap 40px + border 2px(#000) + size 고정
-
-hover/click (≥1280px에서만 적용)
-
-1번: overlay 텍스트박스 “Hello World” 아래에서 올라오며 fade-in/out (transition 600ms)
-
-2번: border 20px 안쪽 생성/색 변경, 배경색 변경 (transition 없음)
-
-3번: 내부에 200x100 div 2개
-
-3-1: 페이지 접근 후 클릭 횟수 (::before)
-
-3-2: 3번 div 클릭 횟수 (::after)
-
-5) 사용 기술
 React
+JavaScript (ES6)
+HTML5 / CSS3
 
-CSS / (사용한 경우) [TailwindCSS]
+프로젝트 구성
 
-Swiper.js
+src 폴더를 기준으로 컴포넌트와 페이지 단위로 파일을 분리했습니다.
+Header와 각 섹션은 재사용 가능한 컴포넌트로 구성했으며,
+이미지 리소스는 프로젝트 내부에서 직접 관리했습니다.
 
-6) 참고
-mobile-first 기준으로 작업했습니다.
+구현 내용
 
-구현한 기능 설명 주석은 관련 코드 상단에 기재했습니다.
+모바일 환경을 기준으로 한 반응형 레이아웃을 구현했습니다.
+모바일에서 헤더 메뉴 토글이 가능하도록 구성했습니다.
+섹션별 UI를 컴포넌트 단위로 분리해 구조를 명확히 했습니다.
+레이아웃과 기능의 가독성을 고려해 불필요한 로직은 배제했습니다.
 
-yaml
-코드 복사
+반응형 대응
 
----
+Mobile First 방식으로 작업했습니다.
+태블릿 및 데스크톱 해상도에서도 레이아웃이 자연스럽게 보이도록 조정했습니다.
+CSS Media Query를 사용해 화면 크기에 따라 레이아웃을 변경했습니다.
 
+참고 사항
 
+신입 기준 코딩 테스트 과제인 점을 고려해,
+모든 기능을 완벽히 구현하기보다는 전체 구조와 구현 방향성을 보여주는 데 집중했습니다.
+각 기능에는 상단 주석으로 구현 의도와 설명을 간단히 작성했습니다.
 
+결과물 실행
 
+React build 결과물은 build 폴더에 포함되어 있으며,
+index.html 파일을 기준으로 확인할 수 있습니다.
 
+작성자
 
+박기영
