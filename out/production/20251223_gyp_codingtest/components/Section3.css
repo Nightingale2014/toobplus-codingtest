@@ -1,0 +1,106 @@
+.section3 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+/* 공통 box */
+.box {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+/* 1번 박스 */
+.box1 {
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+    transition: 0.6s;
+}
+
+.box1 .overlay {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fff;
+    transition: all 0.6s ease;
+}
+
+.box1:hover .overlay {
+    top: 0;
+    opacity: 1;
+}
+
+/* 2번 박스 */
+.box2 {
+    background: #f90;
+}
+.box2:hover {
+    border: 20px solid #00c;
+    background: #2ca;
+}
+.box2:active {
+    border: 20px solid #c00;
+    background: #0c0;
+}
+
+/* 3번 박스 */
+.box3 {
+    background: #aaa;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.inner {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.2);
+    border: 2px solid #000;
+    font-weight: 700;
+}
+
+/* 가상 요소로 클릭 횟수 표시 */
+.inner1::before {
+    content: attr(data-clicks);
+}
+.inner2::after {
+    content: attr(data-clicks);
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+    .section3 {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+    .section3 {
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .section3 {
+        gap: 40px;
+    }
+}

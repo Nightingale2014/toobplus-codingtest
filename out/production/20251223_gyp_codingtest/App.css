@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  font-family: 'Pretendard', sans-serif;
+  background: #fff;
+}
+
+.main-section {
+  height: 100vh; /* 디바이스 높이를 가득 채움 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #fff;
+}
+
+.main-section h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.2;
+  text-align: center;
+  margin: 0;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.main-section h1:hover {
+  color: #555;
+}
